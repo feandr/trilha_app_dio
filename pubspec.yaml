@@ -63,12 +63,12 @@ flutter:
   uses-material-design: true
 
   assets:
-    - lib/images/user1.png
-    - lib/images/user2.png
-    - lib/images/user3.png
-    - lib/images/paisagem1.jpg
-    - lib/images/paisagem2.jpg
-    - lib/images/paisagem3.jpg
+    - lib/app/images/user1.png
+    - lib/app/images/user2.png
+    - lib/app/images/user3.png
+    - lib/app/images/paisagem1.jpg
+    - lib/app/images/paisagem2.jpg
+    - lib/app/images/paisagem3.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../pages/dados_cadastrais_hive.dart';
+import '../../pages/dados_cadastrais_page.dart';
 import '../../pages/login_page.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -67,7 +67,7 @@ class CustomDrawer extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const DadosCadastraisHivePage()));
+                      builder: (context) => const DadosCadastraisPage()));
             },
           ),
           const Divider(),
@@ -79,8 +79,8 @@ class CustomDrawer extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 width: double.infinity,
-                child: const Row(
-                  children: [
+                child: Row(
+                  children: const [
                     Icon(Icons.info),
                     SizedBox(
                       width: 5,
@@ -97,8 +97,8 @@ class CustomDrawer extends StatelessWidget {
                     return Container(
                       padding: const EdgeInsets.symmetric(
                           vertical: 16, horizontal: 12),
-                      child: const Column(
-                        children: [
+                      child: Column(
+                        children: const [
                           Text(
                             "Termos de uso e privacidade",
                             style: TextStyle(
@@ -127,34 +127,8 @@ class CustomDrawer extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 width: double.infinity,
-                child: const Row(
-                  children: [
-                    Icon(Icons.numbers),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Text("Gerador de números"),
-                  ],
-                )),
-            onTap: () {
-              // Navigator.pop(context);
-              // Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (bc) => const NumerosAleatoriosHivePage()));
-            },
-          ),
-          const Divider(),
-          const SizedBox(
-            height: 10,
-          ),
-          InkWell(
-            child: Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                width: double.infinity,
-                child: const Row(
-                  children: [
+                child: Row(
+                  children: const [
                     Icon(Icons.album),
                     SizedBox(
                       width: 5,
@@ -162,13 +136,7 @@ class CustomDrawer extends StatelessWidget {
                     Text("Configurações"),
                   ],
                 )),
-            onTap: () {
-              // Navigator.pop(context);
-              // Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //         builder: (bc) => const ConfiguracoesHivePage()));
-            },
+            onTap: () {},
           ),
           const Divider(),
           const SizedBox(
@@ -179,8 +147,8 @@ class CustomDrawer extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 width: double.infinity,
-                child: const Row(
-                  children: [
+                child: Row(
+                  children: const [
                     Icon(Icons.exit_to_app),
                     SizedBox(
                       width: 5,
@@ -201,8 +169,8 @@ class CustomDrawer extends StatelessWidget {
                         "Meu App",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      content: const Wrap(
-                        children: [
+                      content: Wrap(
+                        children: const [
                           Text("Voce sairá do aplicativo!"),
                           Text("Deseja realmente sair do aplicativo?"),
                         ],

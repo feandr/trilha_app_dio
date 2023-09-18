@@ -81,7 +81,15 @@ class _CardPageState extends State<CardPage> {
                                 width: double.infinity,
                                 alignment: Alignment.centerRight,
                                 child: TextButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  CardDetailPage(
+                                                    cardDetail: cardDetail!,
+                                                  )));
+                                    },
                                     child: const Text(
                                       "Ler Mais",
                                       style: TextStyle(
