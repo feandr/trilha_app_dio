@@ -1,8 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:trilha_app/pages/pagina1.dart';
+import 'package:trilha_app/pages/card_page.dart';
 import 'package:trilha_app/pages/pagina2.dart';
 import 'package:trilha_app/pages/pagina3.dart';
+import 'package:trilha_app/shared/widgets/custom_drawer.dart';
 
 import 'dados_cadastrais_page.dart';
 
@@ -24,51 +25,7 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           title: const Text("Main Page"),
         ),
-        drawer: Drawer(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
-                      width: double.infinity,
-                      child: const Text("Dados cadastráis")),
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DadosCadastrais()));
-                  },
-                ),
-                const Divider(),
-                const SizedBox(
-                  height: 10,
-                ),
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
-                      width: double.infinity,
-                      child: const Text("Termos de uso e privacidade")),
-                  onTap: () {},
-                ),
-                const Divider(),
-                const SizedBox(
-                  height: 10,
-                ),
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
-                      width: double.infinity,
-                      child: const Text("Configurações")),
-                  onTap: () {},
-                ),
-              ],
-            ),
-          ),
-        ),
+        drawer: const CustomDrawer(),
         body: Column(
           children: [
             Expanded(
@@ -80,7 +37,7 @@ class _MainPageState extends State<MainPage> {
                   });
                 },
                 children: const [
-                 Pagina1(),
+                 CardPage(),
                  Pagina2(),
                  Pagina3()
                 ],
