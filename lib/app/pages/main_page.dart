@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:trilha_app/pages/card_page/card_page.dart';
-import 'package:trilha_app/pages/list_page/list_view.dart';
-import 'package:trilha_app/pages/list_page/list_view_horizontal.dart';
 
 import '../shared/widgets/custom_drawer.dart';
+import 'card_page/card_page.dart';
 import 'image_assets.dart';
+import 'list_page/list_view.dart';
+import 'list_page/list_view_horizontal.dart';
 import 'tarefa_page.dart';
 
 
