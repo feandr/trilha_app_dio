@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trilha_app/pages/main_page.dart';
+
+import 'main_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -33,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     Expanded(flex: 2, child: Container()),
                     Expanded(
-                      flex:5,
+                      flex: 5,
                       child: Image.network(
                         "https://hermes.digitalinnovation.one/assets/diome/logo.png",
                       ),
@@ -146,7 +147,10 @@ class _LoginPageState extends State<LoginPage> {
                           if (emailController.text.trim() ==
                                   "email@email.com" &&
                               senhaController.text.trim() == "123") {
-                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MainPage()));
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const MainPage()));
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
