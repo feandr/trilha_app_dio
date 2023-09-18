@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../pages/configuracoes_page.dart';
 import '../../pages/dados_cadastrais_page.dart';
 import '../../pages/login_page.dart';
+import '../../pages/numeros_aleatorios_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({Key? key}) : super(key: key);
@@ -79,8 +81,8 @@ class CustomDrawer extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 width: double.infinity,
-                child: Row(
-                  children: const [
+                child: const Row(
+                  children: [
                     Icon(Icons.info),
                     SizedBox(
                       width: 5,
@@ -97,8 +99,8 @@ class CustomDrawer extends StatelessWidget {
                     return Container(
                       padding: const EdgeInsets.symmetric(
                           vertical: 16, horizontal: 12),
-                      child: Column(
-                        children: const [
+                      child: const Column(
+                        children: [
                           Text(
                             "Termos de uso e privacidade",
                             style: TextStyle(
@@ -127,8 +129,34 @@ class CustomDrawer extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                 width: double.infinity,
-                child: Row(
-                  children: const [
+                child: const Row(
+                  children: [
+                    Icon(Icons.numbers),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text("Gerador de números"),
+                  ],
+                )),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (bc) => const NumerosAleatoriosPage()));
+            },
+          ),
+          const Divider(),
+          const SizedBox(
+            height: 10,
+          ),
+          InkWell(
+            child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                width: double.infinity,
+                child: const Row(
+                  children: [
                     Icon(Icons.album),
                     SizedBox(
                       width: 5,
@@ -136,7 +164,13 @@ class CustomDrawer extends StatelessWidget {
                     Text("Configurações"),
                   ],
                 )),
-            onTap: () {},
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (bc) => const ConfiguracoesPage()));
+            },
           ),
           const Divider(),
           const SizedBox(
